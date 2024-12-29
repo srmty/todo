@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readme To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="todo-container">
+        <div class="title box">readme style to-do</div>
+        
+        <div class="help-text box">
+            Commands:
+            !high/!medium/!low - set priority
+            @YYYY-MM-DD - set due date
+        </div>
+
+        <div class="input-container">
+            <input type="text" class="box" 
+                   placeholder="add task (e.g., Buy groceries !high @2024-12-31)"
+                   aria-label="New task input">
+        </div>
+
+        <div class="filter-buttons box">
+            <button data-filter="all" class="active">[ all ]</button>
+            <button data-filter="active">[ active ]</button>
+            <button data-filter="completed">[ completed ]</button>
+        </div>
+
+        <div class="todo-list" id="todoList" role="list"></div>
+        
+        <div class="stats box" role="status" aria-live="polite">0/0 tasks completed</div>
+        <div class="clear-button box" role="button" tabindex="0">[ clear all ]</div>
+    </div>
+
+    <footer class="box">
+        <p>Priority levels: ⚡high ◆medium ○low</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
